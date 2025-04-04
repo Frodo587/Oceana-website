@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oceana Wine & Liquor Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="setLanguage('en')">
+
+  <div class="language-switcher">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('ru')">RU</button>
+  </div>
+
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 data-en="Oceana Wine & Liquor Store" data-ru="Oceana Вино и Ликёры">Oceana Wine & Liquor Store</h1>
+        <p data-en="Finest Selection. Timeless Taste." data-ru="Лучший выбор. Вечный вкус.">Finest Selection. Timeless Taste.</p>
+        <a href="#contact" class="button" data-en="Contact Us" data-ru="Связаться с нами">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 data-en="About Us" data-ru="О нас">About Us</h2>
+    <p data-en="Located in the heart of Brighton Beach, Oceana Wine & Liquor Store offers a curated selection of fine wines and premium spirits including whiskey, cognac, tequila, and more — perfect for any celebration or relaxing evening."
+       data-ru="Магазин Oceana Wine & Liquor Store, расположенный в самом центре Брайтон-Бич, предлагает отборные вина и премиальные крепкие напитки, включая виски, коньяк, текилу и многое другое — идеально для любого праздника или спокойного вечера.">
+       Located in the heart...
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 data-en="Contact" data-ru="Контакты">Contact</h2>
+    <p>
+      <a href="https://maps.apple.com/?q=1053+Brighton+Beach+Avenue+Brooklyn+NY" target="_blank"
+         data-en="Address: 1053 Brighton Beach Avenue, Brooklyn, NY"
+         data-ru="Адрес: 1053 Brighton Beach Avenue, Бруклин, Нью-Йорк">
+         Address: 1053 Brighton Beach Avenue, Brooklyn, NY
+      </a>
+    </p>
+    <p data-en="Hours:" data-ru="Часы работы:">Hours:</p>
+    <ul>
+      <li data-en="Monday - Saturday: 10:00 AM - 9:00 PM" data-ru="Понедельник - Суббота: 10:00 - 21:00">Monday - Saturday: 10:00 AM - 9:00 PM</li>
+      <li data-en="Sunday: 12:00 PM - 9:00 PM" data-ru="Воскресенье: 12:00 - 21:00">Sunday: 12:00 PM - 9:00 PM</li>
+    </ul>
+    <p>
+      <a href="tel:+17189344860" style="color: inherit; text-decoration: underline;">+1 (718) 934-4860</a>
+    </p>
+  </section>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+</html>
